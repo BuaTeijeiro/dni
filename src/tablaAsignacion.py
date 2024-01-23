@@ -38,7 +38,7 @@ class TablaAsignacion:
         try:
             return self.tabla[position]
         except:
-            pass
+            return 'No hay ninguna letra asociada a esta posición'
         
 if __name__ == '__main__':
     tabla = TablaAsignacion()
