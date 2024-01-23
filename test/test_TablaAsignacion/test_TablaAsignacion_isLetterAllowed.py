@@ -9,3 +9,10 @@ def test_isLetterAllowed_allowed():
     assert tabla.isLetterAllowed('F')
     assert tabla.isLetterAllowed('L')
     assert tabla.isLetterAllowed('X')
+    
+@pytest.mark.letterAllowed
+def test_isLetterAllowed_forbidden():
+    forbiddenLetters = ["I", "Ñ", "O", "U"]
+    tabla = TablaAsignacion()
+    for letter in forbiddenLetters:
+        assert not tabla.isLetterAllowed(letter)
