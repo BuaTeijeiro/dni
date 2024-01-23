@@ -40,6 +40,9 @@ class TablaAsignacion:
         except:
             return 'No hay ninguna letra asociada a esta posición'
         
+    def isLetterAllowed(self,letter):
+        return letter in self.getTable()
+        
 if __name__ == '__main__':
     tabla = TablaAsignacion()
     print(tabla)
