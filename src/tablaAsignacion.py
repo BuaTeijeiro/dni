@@ -32,7 +32,7 @@ class TablaAsignacion:
         return self.tabla
         
     def __repr__(self):
-        return " ".join(self.tabla)
+        return " ".join(self.getTable())
         
 if __name__ == '__main__':
     tabla = TablaAsignacion()
