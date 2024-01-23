@@ -33,6 +33,12 @@ class TablaAsignacion:
         
     def __repr__(self):
         return " ".join(self.getTable())
+    
+    def getLetter(self, position):
+        try:
+            return self.tabla[position]
+        except:
+            pass
         
 if __name__ == '__main__':
     tabla = TablaAsignacion()
