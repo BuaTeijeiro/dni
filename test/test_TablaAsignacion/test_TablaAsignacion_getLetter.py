@@ -12,3 +12,5 @@ def test_getLetter_validposition():
 def test_getLetter_invalidposition():
     tabla = TablaAsignacion()
     assert tabla.getLetter(80) == 'No hay ninguna letra asociada a esta posición'
+    assert tabla.getLetter(40) == 'No hay ninguna letra asociada a esta posición'
+    assert tabla.getLetter(27) == 'No hay ninguna letra asociada a esta posición'
