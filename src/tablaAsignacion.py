@@ -27,6 +27,9 @@ class TablaAsignacion:
             "K",
             "E",
         ]
+    
+    def getTable(self):
+        return self.tabla
         
     def __repr__(self):
         return " ".join(self.tabla)
