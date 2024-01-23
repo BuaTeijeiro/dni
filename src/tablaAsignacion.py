@@ -34,6 +34,9 @@ class TablaAsignacion:
     def __repr__(self):
         return " ".join(self.getTable())
     
+    def getmodule(self):
+        return len(self.getTable())
+    
     def getLetter(self, position):
         try:
             return self.tabla[position]
