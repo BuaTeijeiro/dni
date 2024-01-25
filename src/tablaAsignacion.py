@@ -45,6 +45,10 @@ class TablaAsignacion:
         
     def isLetterAllowed(self,letter):
         return letter in self.getTable()
+    
+    def getDniLetter(self,dni):
+        dniLetterPosition = int(dni) % self.getmodule()
+        return self.getLetter(dniLetterPosition)
         
 if __name__ == '__main__':
     tabla = TablaAsignacion()
