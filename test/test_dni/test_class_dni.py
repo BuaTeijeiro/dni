@@ -16,30 +16,30 @@ def test_getDni():
     dni_sample = Dni('53976108','F')
     assert dni_sample.getDni() == '53976108F'
     
-@pytest.mark.checkNumber
-def test_checkNumber_allInvalidCharacters():
+@pytest.mark.isNumberValid
+def test_isNumberValid_allInvalidCharacters():
     dni_sample = Dni('holabuenas','F')
-    assert dni_sample.checkNumber() == False
+    assert dni_sample.isNumberValid() == False
     
-@pytest.mark.checkNumber
-def test_checkNumber_someInvalidCharacters():
+@pytest.mark.isNumberValid
+def test_isNumberValid_someInvalidCharacters():
     dni_sample = Dni('123holabuenas','F')
-    assert dni_sample.checkNumber() == False
+    assert dni_sample.isNumberValid() == False
     
-@pytest.mark.checkNumber
-def test_checkNumber_validCharacters_shortLength():
+@pytest.mark.isNumberValid
+def test_isNumberValid_validCharacters_shortLength():
     dni_sample = Dni('123','F')
-    assert dni_sample.checkNumber() == False
+    assert dni_sample.isNumberValid() == False
     
-@pytest.mark.checkNumber
-def test_checkNumber_validCharacters_longLength():
+@pytest.mark.isNumberValid
+def test_isNumberValid_validCharacters_longLength():
     dni_sample = Dni('123545416354654165','F')
-    assert dni_sample.checkNumber() == False
+    assert dni_sample.isNumberValid() == False
     
-@pytest.mark.checkNumber
-def test_checkNumber_validCharacters_validLength():
+@pytest.mark.isNumberValid
+def test_isNumberValid_validCharacters_validLength():
     dni_sample = Dni('12345678','F')
-    assert dni_sample.checkNumber()
+    assert dni_sample.isNumberValid()
 
 @pytest.mark.checkValidity
 def test_checkValidity_validLetter():

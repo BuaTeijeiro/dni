@@ -10,7 +10,7 @@ class Dni:
         self.number = str(number)
         self.letter = str(letter)
         self.table = TablaAsignacion()
-        self.valid = self.checkValidity()
+        self.validity = self.checkValidity()
     
     def getNumber(self):
         return self.number
@@ -25,14 +25,14 @@ class Dni:
         return self.table
     
     def getValidity(self):
-        return self.valid
+        return self.validity
     
-    def checkNumber(self):
+    def isNumberValid(self):
         number = self.getNumber()
         return number.isdigit() and len(number) == Dni.DNI_NUMBER_LENGTH
         
     def checkValidity(self):
-        return self.getLetter() == self.table.getDniLetter(self.getNumber()) if self.checkNumber() else False
+        return self.getLetter() == self.table.getDniLetter(self.getNumber()) if self.isNumberValid() else False
         
     def __repr__(self):
         if self.getValidity():
