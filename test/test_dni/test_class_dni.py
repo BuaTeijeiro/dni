@@ -46,6 +46,11 @@ def test_checkValidity_invalidLetter():
     dni_sample = Dni('53976108','H')
     assert dni_sample.checkValidity() == False
     
+@pytest.mark.checkValidity
+def test_checkValidity_noLetter():
+    dni_sample = Dni('53976108','')
+    assert dni_sample.checkValidity() == False
+    
     
 @pytest.mark.checkValidity
 def test_checkValidity_invalidNumber():

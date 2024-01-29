@@ -24,7 +24,7 @@ class Dni:
         return number.isdigit() and len(number) == 8
         
     def checkValidity(self):
-        return self.letter == self.table.getDniLetter(self.getNumber()) if self.checkNumber() else False
+        return self.getLetter() == self.table.getDniLetter(self.getNumber()) if self.checkNumber() else False
         
     def __repr__(self):
         if self.valid:
@@ -32,11 +32,7 @@ class Dni:
         else:
             return 'Para que quieres ver esto si no es válido'
         
-if __name__ == '__main__':
-    print(Dni('53976108','F'))
-    print(Dni('53976108','H'))
-    print(Dni('39451213','A'))
-    print(Dni('52938234',''))
+
     
         
     
