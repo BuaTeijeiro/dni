@@ -28,6 +28,10 @@ class Dni:
     def isNumberValid(self):
         number = self.getNumber()
         return number.isdigit() and len(number) == Dni.DNI_NUMBER_LENGTH
+    
+    def computeValidLetter(self):
+        table = self.getTable()
+        return table.getDniLetter(self.getNumber())
         
     def isDniValid(self):
         return self.getLetter() == self.table.getDniLetter(self.getNumber()) if self.isNumberValid() else False

@@ -16,6 +16,11 @@ def test_getDni():
     dni_sample = Dni('53976108','F')
     assert dni_sample.getDni() == '53976108F'
     
+@pytest.mark.computeValidLetter
+def test_computeValidLetter():
+    dni_sample = Dni('53976108','H')
+    assert dni_sample.computeValidLetter() == 'F'
+    
 @pytest.mark.isNumberValid
 def test_isNumberValid_allInvalidCharacters():
     dni_sample = Dni('holabuenas','F')
