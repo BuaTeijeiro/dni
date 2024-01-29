@@ -34,13 +34,10 @@ class Dni:
         return table.getDniLetter(self.getNumber())
         
     def isDniValid(self):
-        return self.getLetter() == self.table.getDniLetter(self.getNumber()) if self.isNumberValid() else False
+        return self.getLetter() == self.computeValidLetter() if self.isNumberValid() else False
         
     def __repr__(self):
-        if self.getValidity():
-            return self.getNumber() + self.getLetter()
-        else:
-            return 'Para que quieres ver esto si no es válido'
+        return self.getDni() if self.getValidity() else 'DNI NO VÁLIDO'
         
 
     

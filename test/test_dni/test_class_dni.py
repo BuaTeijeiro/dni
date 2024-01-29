@@ -75,7 +75,7 @@ def test_dnirepr_valid():
 @pytest.mark.dnirepr
 def test_dnirepr_invalid():
     dni_sample = Dni('53976108','H')
-    assert dni_sample.__repr__() == 'Para que quieres ver esto si no es válido'
+    assert dni_sample.__repr__() == 'DNI NO VÁLIDO'
     
     
 
