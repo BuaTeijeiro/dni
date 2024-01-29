@@ -4,13 +4,11 @@ class Dni:
     #Añadir la longitud de la cadena del dni como variable global, por si cambia.
     DNI_NUMBER_LENGTH = 8
     
-    
-    
     def __init__(self,number='00000000',letter=''):
         self.number = str(number)
         self.letter = str(letter)
         self.table = TablaAsignacion()
-        self.validity = self.checkValidity()
+        self.validity = self.isDniValid()
     
     def getNumber(self):
         return self.number
@@ -31,7 +29,7 @@ class Dni:
         number = self.getNumber()
         return number.isdigit() and len(number) == Dni.DNI_NUMBER_LENGTH
         
-    def checkValidity(self):
+    def isDniValid(self):
         return self.getLetter() == self.table.getDniLetter(self.getNumber()) if self.isNumberValid() else False
         
     def __repr__(self):

@@ -41,26 +41,26 @@ def test_isNumberValid_validCharacters_validLength():
     dni_sample = Dni('12345678','F')
     assert dni_sample.isNumberValid()
 
-@pytest.mark.checkValidity
-def test_checkValidity_validLetter():
+@pytest.mark.isDniValid
+def test_isDniValid_validLetter():
     dni_sample = Dni('53976108','F')
-    assert dni_sample.checkValidity()
+    assert dni_sample.isDniValid()
 
-@pytest.mark.checkValidity
-def test_checkValidity_invalidLetter():
+@pytest.mark.isDniValid
+def test_isDniValid_invalidLetter():
     dni_sample = Dni('53976108','H')
-    assert dni_sample.checkValidity() == False
+    assert dni_sample.isDniValid() == False
     
-@pytest.mark.checkValidity
-def test_checkValidity_noLetter():
+@pytest.mark.isDniValid
+def test_isDniValid_noLetter():
     dni_sample = Dni('53976108','')
-    assert dni_sample.checkValidity() == False
+    assert dni_sample.isDniValid() == False
     
     
-@pytest.mark.checkValidity
-def test_checkValidity_invalidNumber():
+@pytest.mark.isDniValid
+def test_isDniValid_invalidNumber():
     dni_sample = Dni('hola','F')
-    assert dni_sample.checkValidity() == False
+    assert dni_sample.isDniValid() == False
     
 @pytest.mark.dnirepr
 def test_dnirepr_valid():
