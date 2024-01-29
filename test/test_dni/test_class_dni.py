@@ -71,11 +71,6 @@ def test_isDniValid_invalidNumber():
 def test_dnirepr_valid():
     dni_sample = Dni('53976108','F')
     assert dni_sample.__repr__() == '53976108F'
-
-@pytest.mark.dnirepr
-def test_dnirepr_invalid():
-    dni_sample = Dni('53976108','H')
-    assert dni_sample.__repr__() == 'DNI NO VÁLIDO'
     
     
 

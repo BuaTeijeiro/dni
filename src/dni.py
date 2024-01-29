@@ -37,7 +37,7 @@ class Dni:
         return self.getLetter() == self.computeValidLetter() if self.isNumberValid() else False
         
     def __repr__(self):
-        return self.getDni() if self.getValidity() else 'DNI NO VÁLIDO'
+        return self.getDni()
         
 
     
